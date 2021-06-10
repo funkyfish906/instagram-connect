@@ -31,7 +31,7 @@ class RefreshTokens extends Command
         $expiresInDate = Carbon::now()->addDays(2)->format('Y-m-d H:i:s');
 
         $profiles = InstagramProfile::query()
-            ->whereDate('token_expires_in', '>=', $expiresInDate)
+            ->whereDate('token_expires_in', '<=', $expiresInDate)
             ->get();
 
         try {

@@ -20,7 +20,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command(Commands\InstagramProfiles\RefreshTokens::class)->daily();
+        $schedule->command(Commands\InstagramProfile\RefreshTokens::class)->daily();
     }
 
     /**

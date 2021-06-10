@@ -1,15 +1,15 @@
 @extends('layouts.client')
 
 @section('content')
-    @if ($connectedSuccess = Session::get('connection_success'))
+    @if ($success = Session::get('connection_success'))
         <div class="text-success">
-            {{ $connectedSuccess }}
+            {{ $success }}
         </div>
     @endif
 
-    @if ($connectedFailed = Session::get('connected_failed'))
+    @if ($failed = Session::get('connection_failed'))
         <div class="text-danger">
-            {{ Session::get('connected_failed') }}
+            {{ $failed }}
         </div>
     @endif
 

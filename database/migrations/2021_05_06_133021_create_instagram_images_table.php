@@ -18,7 +18,7 @@ class CreateInstagramImagesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('profile_id');
             $table->string('media_id');
-            $table->string('image_url');
+            $table->string('image_url', 1000);
             $table->string('filename')->nullable();
             $table->text('caption')->nullable();
             $table->timestamps();

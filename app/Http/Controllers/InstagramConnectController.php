@@ -65,10 +65,10 @@ class InstagramConnectController extends Controller
         } catch (Throwable $e) {
             Log::error($e->getMessage());
             return Redirect::route('instagram-connect.index')
-                ->with('connected_failed', 'Connection failed');
+                ->with('connection_failed', 'Connection failed');
         }
 
         return Redirect::route('instagram-connect.index')
-            ->with('connected_success', 'Connection success');
+            ->with('connection_success', 'Connection success');
     }
 }
